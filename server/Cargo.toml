@@ -1,0 +1,18 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# frontend SSR
+frontend = { path ="../frontend" }
+yew = { version = "0.21.0", features = ["ssr"] }
+futures = { version = "0.3.30", features = ["std"], default-features = false }
+# server
+tokio = { version = "1.39.3", features = ["macros", "rt-multi-thread"] }
+axum = "0.7.5"
+axum-server = { version = "0.7.1", features = ["tls-rustls"] }
+tower = { version = "0.4", features = ["make"] }
+tower-http = { version = "0.5.2", features = ["fs", "cors"] }
+clap = { version = "4.5.16", features = ["derive"] }
+hyper = { version = "1.4.1", features = ["server", "http1"] }
