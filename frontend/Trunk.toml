@@ -1,2 +1,7 @@
 [build]
+target = "index.html"
+release = true
+dist = "dist"
+public_url = "/"
 filehash = false
+minify = "on_release"

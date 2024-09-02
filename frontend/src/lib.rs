@@ -4,6 +4,8 @@ use gloo::history::{AnyHistory, History, MemoryHistory};
 use yew::{function_component, html, AttrValue, Html, Properties};
 use yew_router::{Routable, BrowserRouter, Switch, Router};
 
+mod views;
+
 #[derive(Routable, Clone, PartialEq, Eq, Debug)]
 pub enum Route {
     #[at("/")]
@@ -12,7 +14,7 @@ pub enum Route {
 
 pub fn switch(route: Route) -> Html {
     match route {
-        Route::Home => html! { <p>{"Home page"}</p> }
+        Route::Home => html! { <p class="hello second">{"Home page"}</p> }
     }
 }
 

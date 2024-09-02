@@ -6,6 +6,8 @@ use futures::{stream, StreamExt};
 use hyper::Uri;
 
 mod utils;
+mod routes;
+mod controllers;
 use frontend::{ServerApp, ServerAppProps};
 use tower_http::services::ServeDir;
 use utils::clap::Opt;
